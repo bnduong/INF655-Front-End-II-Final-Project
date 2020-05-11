@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Draggable + Sortable</title>
+	<link rel="stylesheet" href="../../themes/base/jquery.ui.all.css">
+	<script src="../../jquery-1.8.2.js"></script>
+	<script src="../../ui/jquery.ui.core.js"></script>
+	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script src="../../ui/jquery.ui.mouse.js"></script>
+	<script src="../../ui/jquery.ui.draggable.js"></script>
+	<script src="../../ui/jquery.ui.sortable.js"></script>
+	<link href="styles/contenteditable.css" rel="stylesheet" type="text/css">
+	<style>
+	ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+	li { margin: 5px; padding: 5px; width: 400px; }
+	</style>
+	<script>
+	$(function() {
+		$( "#sortable" ).sortable({
+			revert: true
+		});
+		$( "#draggable" ).draggable({
+			connectToSortable: "#sortable",
+			helper: "clone",
+			revert: "invalid"
+		});
+		$( "ul, li" ).disableSelection();
+	});
+	</script>
+</head>
+<body>
+<div id="wrapper"
+<center><img src="images/logo.png"></center>
+<h1>Restaurant Menu</h1>
+<center>
+<p>Here you can sort the menu in order of your choice.</p><br><br>
+<ul id="sortable">
+<h2><b>Appetizers</b></h2>
+<li style="text-align: left"><b>A1.&nbsp;&nbsp;</b>Cha Gio Vietnam (Fried Egg Rolls) 2 rolls - chicken $2.75 - pork $2.50</li>
+<li style="text-align: left"><b>A2.&nbsp;&nbsp;</b>Goi Cuon (Steamed Rolls - 2 rolls - Steamed rice-paper rolls with lettuce, bean sprouts, vermicelli noodles served with peanut sauce) shrimp $3.90 - shrimp & pork $4.70</li>
+<li style="text-align: left"><b>A3.&nbsp;&nbsp;</b>Xiu Mai (Dumplings 4 pcs -  	steamed pork and shrimp dumplings) - $4.25</li>
+<li style="text-align: left"><b>A4.&nbsp;&nbsp;</b>Banh Cuon Cha Lua (Rice Cake - steamed rice cake filled with grounded pork and pork rolls, and shredded pork) - $6.85</li>
+<li style="text-align: left"><b>A5.&nbsp;&nbsp;</b>Sup Hoang Thanh - Wonton Soup (pork won-ton soup)- $3.00</li>
+<li style="text-align: left"><b>A6.&nbsp;&nbsp;</b>Soup Tom - Shrimp Soup (sizzling rice soup with shrimp and egg)- $8.00</li>
+<li style="text-align: left"><b>A7.&nbsp;&nbsp;</b>Egg Drop Soup -	(Soup of wispy beaten eggs in boiled chicken broth)- $2.00</li>
+<li style="text-align: left"><b>A8.&nbsp;&nbsp;</b>Chao Ga -  Chicken rice porridge - $3.00</li>
+<li style="text-align: left"><b>A9.&nbsp;&nbsp;</b>Bot Chien - Fried Rice Cake (Fried rice cake with a fried egg on top) - $5.00</li>
+<li style="text-align: left"><b>A10.&nbsp;&nbsp;</b>Banh Xeo - Vietnamese Crepe (Vietnamese crepe filled with bean sprouts and onions, served with a special sauce) - $8.50 - Shrimp & Pork - $9.35</li>
+<li style="text-align: left"><b>A11.&nbsp;&nbsp;</b>Goi Ga - Chicken Salad (chicken salad with cucumber, onions, lime juice, topped with peanuts and shrimp chips) - $6.00</li>
+<li style="text-align: left"><b>A12.&nbsp;&nbsp;</b>Goi Cuon Nem (2 rolls - Steamed rice paper rolls with vermicelli & pork patties) - $4.30</li>
+<br><br>
+<h2><b>Soup & Noodles</b></h2>
+<li style="text-align: left"><b>SN1.&nbsp;&nbsp;</b>Bun Bo Hue (Spicy Hue Style vermicelli noodle soup with combination of beef shank, lemon grass, Vietnamese mint, pork hock, pork cake OR beef only) - $12.75</li>
+<li style="text-align: left"><b>SN2.&nbsp;&nbsp;</b>Bun Rieu (tomatoes-egg-crab base noodle soup with shrimp, pork ball, tofu, spare ribs and dry shrimp) - $12.00</li>
+<li style="text-align: left"><b>SN3.&nbsp;&nbsp;</b>Pho Tai (rice noodles soup with thin-sliced beef) - $10.00</li>
+<li style="text-align: left"><b>SN4.&nbsp;&nbsp;</b>Pho Dac Biet (rice noodles soup with sliced beef, tendon, meatball, and tripe) - $12.50</li>
+<li style="text-align: left"><b>SN5.&nbsp;&nbsp;</b>Pho Tai Bo Vien (rice noodles soup with beef and meatballs.) - $11.00</li>
+<li style="text-align: left"><b>SN6.&nbsp;&nbsp;</b>Pho Ga (rice noodles soup with shredded chicken) - $10.00</li>
+<li style="text-align: left"><b>SN7.&nbsp;&nbsp;</b>Hu Tieu Dac Biet (rice noodles soup with thin-sliced roasted pork, steamed pork, shrimp, squid, fish patty, and quail egg) - $11.85</li>
+<li style="text-align: left"><b>SN8.&nbsp;&nbsp;</b>Hu Tieu Bo Kho (lemon grass beef stew with rice noodles and carrots, your choice of beef or chicken and choice of rice noodle or egg noodle) - $12.50</li>
+<br><br>
+<h2><b>Rice Dishes</b></h2>
+<li style="text-align: left"><b>R1.&nbsp;&nbsp;</b>Com Chien Bo (fried rice with beef, carrots, peas, and onions) - $9.85</li>
+<li style="text-align: left"><b>R2.&nbsp;&nbsp;</b>Com Chien Ga (fried rice with chicken, carrots, peas, and onions) - $9.50</li>
+<li style="text-align: left"><b>R3.&nbsp;&nbsp;</b>Com Chien Tom (fried rice with shrimp, carrot, peas, and onions) - $10.25</li>
+<li style="text-align: left"><b>R4.&nbsp;&nbsp;</b>Com Chien Duong Chau (combination fried rice with shrimp, Chinese sausage, BBQ pork, chicken, and beef) - $10.75</li>
+<li style="text-align: left"><b>R5.&nbsp;&nbsp;</b>Com Suon Nuong (char-broiled boneless pork chops) - $11.00</li>
+<li style="text-align: left"><b>R6.&nbsp;&nbsp;</b>Com Suon Bi Cha (char-broiled boneless pork chop, meat cake, and shredded pork) - $10.85</li>
+<li style="text-align: left"><b>R7.&nbsp;&nbsp;</b>Tom Xao Bong Cai (Shrimp & Broccoli Stir-fry with onion and carrots in brown sauce) - $13.15</li>
+<li style="text-align: left"><b>R8.&nbsp;&nbsp;</b>Ca Hoi Nuong (grilled salmon with vegetables) - $14.15</li>
+<li style="text-align: left"><b>R9.&nbsp;&nbsp;</b>Tom Xao Ca Ri (stir-fried curry shrimp with potatoes, eggplants, and onions) - $14.75</li>
+<li style="text-align: left"><b>R10.&nbsp;&nbsp;</b>Ca Trout Nuong (grilled trout with green beans, mushrooms, and onions) - $16.00</li>
+<h2><b>Vegetarian Dishes</b></h2>
+<li style="text-align: left"><b>V1.&nbsp;&nbsp;</b>Hu Tieu Bo Kho Chay (rice noodles soup with tofu stew and lemon grass) - $11.00</li>
+<li style="text-align: left"><b>V2.&nbsp;&nbsp;</b>Bun Bo Hue Chay (spicy mid-country style tofu noodles soup with lemon grass) - $11.00</li>
+<li style="text-align: left"><b>V3.&nbsp;&nbsp;</b>Hu Tieu Chay (Veggie Tofu rice noodle soup, mockduck, broccoli, mushrooms, carrots) - $12.25</li>
+<li style="text-align: left"><b>V4.&nbsp;&nbsp;</b>Canh Chua Dau Hu (spicy sour soup with tofu and Vietnamese vegetables, served with steam rice) - $12.50</li>
+<li style="text-align: left"><b>V5.&nbsp;&nbsp;</b>Bun Dau Hu Cha Gio (vermicelli noodles, tofu with an eggroll, cucumbers, lettuce, bean sprouts, mint, lemon grass, and peanuts) - $9.50</li></td>
+<li style="text-align: left"><b>V6.&nbsp;&nbsp;</b>Mi Can Xao Dau (tir-fried mock duck and green beans) - $11.00</li></td>
+</center>
+<br><br>
+</div>
+</body>
+</html>
+	

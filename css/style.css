@@ -1,0 +1,175 @@
+body {
+	background-color: #B8DBED;
+	color: #666666;
+	font-family: Arial, Helvetica, san-serif;	
+    background-repeat: no-repeat;
+}
+#header {
+      background-position: center;
+      background-repeat: no-repeat;
+	  height: 120px;
+	  width: 480%;
+	  padding-top: 30px;
+	  padding-left: 3em;
+	  text-align: center;
+	  color: #FFFFFF;
+}	  
+
+#wrapper {
+	   margin-left: auto;
+       margin-right: auto;
+       width: 80%;
+       min-width: 960px;
+       max-width: 2048px;
+       background-color: #90C7E3;
+       box-shadow: 3px 3px 3px #333333;
+       border: 1px #000033; 
+       background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);	   
+	   }
+	   
+main {
+	padding-top: 1px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	display: block;
+	margin-left: 190px;
+	background-color: #FFFFFF;
+}
+
+h1 {
+	background-color: #FFFFFF;
+	color: #90C7E3;
+	margin-bottom: 0;
+	font-family: Georgia, Times New Roman, serif;
+	margin-top: 0;
+	text-align: center;
+	font-size: 3em;
+	letter-spacing: 0.25em;
+}
+
+h2 {
+	color: #3399CC;
+	font-family: Georgia, Times New Roman, serif;
+	text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+h3 {
+	font-family: Georgia, Times New Roman, serif;
+	color: #000033;
+}
+
+h4 {
+    color: #3399CC;
+}
+
+p { font-size: 18px;
+    line-height: 1.5em
+	background-color: #90C7E3;}
+	
+.center {text-align: center;}
+ 
+.navbar navbar-default {
+         background-color: #90C7E3;}
+ 
+.navbar-header {
+        background-color:  #3399CC; 
+		font-size: 60px;}
+		
+.navbar-brand { 
+        background-color: #7FFFD4;;
+        font-size: 60px;
+		color: #FFFFFF;
+}
+		
+.nav navbar-nav {
+        background-color: #90C7E3;
+		color: #FFFFFF;}
+		
+.container-fluid {
+        background-color: #90C7E3;}
+		
+.img-fluid {max-width: 100%; height: auto;}
+
+
+a:link {color: #5C7FA3;}
+a:visited {color: #344873;}
+a:hover {color: #A52A2A;}
+
+
+
+table {
+      border: 2px solid #3399CC;
+	  border-collapse: collapse;
+}
+
+tr:nth-of-type(even) { background-color: #F5FAFC; }
+
+
+table td, th {
+	padding: 0.5em;
+	border: 2px solid #3399CC;
+}
+
+table td {
+	text-align: center;
+}
+	
+.text {
+	text-align: left;
+}
+
+	
+#contact {
+	font-size: 90%;
+}
+
+#footer { text-align: center;
+         font-style: italic;
+         font-size: 14px; 
+		 font-family: Georgia, Times New Roman, serif;
+		 padding: 20px;
+		 margin-left: 190px;
+		 }
+		 
+header, main, nav, footer, figure, figcaption, aside, section, article { display: block; }
+
+#mobile { 
+         display: none;
+}
+
+#desktop {
+	     display: inline;
+}
+
+@media only screen and (max-width: 64em) {
+	body { margin: 0; background-color: #FFFFFF;}
+	#wrapper { min-width: 0; width: auto; box-shadow: none; border: none;}
+	header { padding-top: 0.5em; padding-bottom: 0.5em; padding-left: 0; height: auto;}
+	h1 { letter-spacing: 0.1em;}
+	main { margin-left: 0;}
+	nav { float: none; width: auto; padding: 0.5em;}
+	nav li {display: inline; padding-top: 0.25em; padding-bottom: 0.25em; margin-left: 0.75em; margin-right: 0.75em;}
+	nav ul { text-align: center; } 
+    nav a { border-style: none;} 
+	#homehero { margin-left: 0; height: 200px;}
+	#yurthero { margin-left: 0; height: 200px;}
+	#trailhero { margin-left: 0; height: 200px;}
+	#footer { margin-left: 0;}
+}
+  
+
+@media only screen and (max-width: 37.5em) {
+	main { padding-top: 0.1em; padding-bottom: 0.1em; padding-left: 1em; padding-right: 1em; font-size: 90%}
+	h1 { font-size: 2em;}
+	nav { padding: 0;}
+	nav li { display: block; margin: 0; border-bottom: 2px #330000;}
+	a:link { display: block;}
+	a:visited { display: block;}
+	a:hover { display: block;}
+	#homehero { background-image: none; height: 0;}
+	#yurthero { background-image: none; height: 0;}
+	#trailhero { background-image: none; height: 0;}
+	#mobile { display: inline;}
+	#desktop { display: none;}
+}

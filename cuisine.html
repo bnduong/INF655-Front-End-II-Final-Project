@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vietnam Kitchen</title>
+
+    <!-- Bootstrap -->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- CSS style for the Modal for this file only -->
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+</style>
+<style>
+  p {
+    background: #90C7E3;
+    padding: 20px;
+  }
+</style>
+
+  </head>
+  <body>
+   <div id="wrapper">
+
+<!-- Navigation bar -->  
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+            
+<a href="index.html">
+<img src="images/logo.png" width="300" height="100">
+</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="cuisine.html">Cuisine</a></li>
+	  <li><a href="menu.html">Menu</a></li>
+      <li><a href="service.html">Service</a></li>
+	  <li><a href="more-menu.html">More Menu</a></li>
+      <li><a href="testimonials.html">Customer Testimonials</a></li>
+	  <li><a href="contact.html">Contact Information</a></li>
+    </ul>
+  </div>
+</nav> 
+<center><img src="images/cuisine.jpg" width="600" height="300" alt="cuisine"></center>
+<!-- Bootstrap framework -->
+     <div class="jumbotron">
+        <center><h2 class="display-3"><i>The Best Vietnamese Cuisine</i></h2></center>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4 style="color: #3399CC">Healthiest Ingredients and Recipes</h4>
+          <p>Whether it is appetizer, meat, sea food, or vegetarian, our recipes always contain the best quality and healthiest ingredients 
+		  that are carefully selected from the best sources on the market.</p>
+		 </div>
+
+        <div class="col-lg-6">
+          <h4 style="color: #3399CC">Good Atmosphere and Service</h4>
+          <p>We believe that the customers are our guests and deserve prompt, friendly, and courteous service we want our guests to come with 
+		  great expectations and leave with satisfaction.</p>
+
+		</div><br><br>
+		</div>
+		<section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+		  <img id="myImg" src="images/seafood.jpg" alt="con2" style="width:100%;max-width:300px">
+		  <p>Seafood</p>
+		  
+		  <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+           <img id="myImg1" class="img-circle" src="images/noodle.jpg" alt="con3" style="width:100%;max-width:300px">
+           <p>Noodles</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+             
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+                  <img id="myImg2" src="images/LunchCombo.jpg" alt="con4" style="width:100%;max-width:300px">
+                  <p>Lunch Combo</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+             
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+            <img id="myImg3" class="img-circle" src="images/meat-banhxeo.jpg" alt="con5" style="width:100%;max-width:300px">
+            <p>Meat: Banh Xeo</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+</div>
+  <div class="col-6 col-sm-3 placeholder">
+		  <img id="myImg" src="images/dessert-che.jpg" alt="con2" style="width:100%;max-width:300px">
+		  <p>Desserts</p>
+		  
+		  <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+           <img id="myImg1" class="img-circle" src="images/vegeterian.jpg" alt="con3" style="width:100%;max-width:300px">
+           <p>Vegeterian</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+             
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+                  <img id="myImg2" src="images/appertizers.jpg" alt="con4" style="width:100%;max-width:300px">
+                  <p>Appertizers</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+             
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+            <img id="myImg3" class="img-circle" src="images/soups.jpg" alt="con5" style="width:100%;max-width:300px">
+            <p>Soups</p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+</div>
+</section><br>
+         <p style="text-align: center">The Image Modal for Vietnam Kitchen</p>     
+           
+ <hr>
+  
+  <!-- FOOTER -->
+      <div id="footer">Copyright &copy; 2020 Vietnam Kitchen<br>
+      <a href="mailto: bhnd@yahoo.com">bhnd@yahoo.com</a><br>
+     <p><a href="#">Back to top</a></p><div>
+</div>
+</div>
+</div>
+</body>
+</html>

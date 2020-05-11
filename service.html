@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vietnam Kitchen</title>
+
+    <!-- Bootstrap -->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- CSS style for this file only -->
+  <style>
+    .toggler { width: 500px; height: 250px; position: relative; }
+    #button { padding: .5em 1em; text-decoration: none; }
+    #effect { width: 240px; height: 200px; padding: 0.4em; position: relative; background: #fff; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- JS animation -->
+  <script>
+  $( function() {
+    var state = true;
+    $( "#button" ).on( "click", function() {
+      if ( state ) {
+        $( "#effect" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 1000 );
+      } else {
+        $( "#effect" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+      }
+      state = !state;
+    });
+  } );
+  </script>
+
+  </head>
+  <body>
+  <div id="wrapper">
+    <!-- Navigation bar -->  
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+            
+<a href="index.html">
+<img src="images/logo.png" width="300" height="100">
+</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="cuisine.html">Cuisine</a></li>
+	  <li><a href="menu.html">Menu</a></li>
+      <li><a href="service.html">Service</a></li>
+	  <li><a href="more-menu.html">More Menu</a></li>
+      <li><a href="testimonials.html">Customer Testimonials</a></li>
+	  <li><a href="contact.html">Contact Information</a></li>
+    </ul>
+  </div>
+</nav> 
+ <br>
+ 
+ <center><img src="images/service1.jpg" width="800" height="250"></center><br>
+<hr>
+   <div class="jumbotron">
+        <center><h2 class="display-3"><i>The Best Vietnamese Restaurant In Town</i></h2></center>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4 style="color: #3399CC">Vietnam Kitchen Services</h4>
+          <p>When it comes to services, our restaurant focuses on its customers and customers' satisfaction. Our restaurant offers a warm, friendly,
+             and healthy environment for all society classes.  We have all kind of customers, not just Vietnamese people.  Many foreigners come to
+             our place and they said they really like Vietnam Kitchen. (You can see their comments in the section Customer Testimonials.)</p>
+		 </div>
+
+        <div class="col-lg-6">
+          <h4 style="color: #3399CC">Employee Uniforms</h4>
+          <p>We	believe the appearance of our employees has a big impression for our customers.  In Vietnam Kitchen, all employees are required
+             to wear black paint and white shirt.  The unique uniform helps customers know who is working for the restaurant in case they need help.</p>
+		</div>
+		</div>
+		<br><Br>
+		
+		<section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+		  <img id="myImg" src="images/service9.jpg" alt="con2" style="width:100%;max-width:300px">
+		  
+		  
+		  <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+           <img id="myImg1" class="img-circle" src="images/service2.jpg" alt="con3" style="width:100%;max-width:300px">
+        
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+             
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+                  <img id="myImg2" src="images/service3.jpg" alt="con4" style="width:100%;max-width:300px">
+               
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+             
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+            <img id="myImg3" class="img-circle" src="images/service4.jpg" alt="con5" style="width:100%;max-width:300px">
+        
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+</div>
+</section><br>
+         <p style="text-align: center">The Image Modal for Vietnam Kitchen</p>     
+           
+ <hr>
+  
+  <!-- FOOTER -->
+      <div id="footer">Copyright &copy; 2020 Vietnam Kitchen<br>
+      <a href="mailto: bhnd@yahoo.com">bhnd@yahoo.com</a><br>
+     <p><a href="#">Back to top</a></p><div>
+</div>
+</div>
+</div>
+</body>
+</html>

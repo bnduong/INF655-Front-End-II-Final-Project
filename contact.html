@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vietnam Kitchen</title>
+
+    <!-- Bootstrap -->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <!-- JQuery animation --> 
+<script type="text/javascript">
+         <!--
+            if(document.images){
+               var image1 = new Image(); // Preload an image
+               image1.src = "images/index1.jpg";
+               var image2 = new Image(); // Preload second image
+               image2.src = "images/index2.jpg";
+            }
+         //-->
+      </script>
+<!-- JS Get Name function -->
+	  <script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+
+  var e = document.getElementById("go");
+  
+  e.addEventListener( "click", function() {
+
+    var name=prompt("What is your name?","Robert");
+    if ( name!=null && name!="" ) {
+      output = "Hello " + name + ". I hope you enjoy my website. Come back anytime. Have a good day!";
+      }
+    else {
+      output = "Hey, I asked you your name!";
+      }
+    
+    document.getElementById( "msg" ).innerText = output;
+
+  }, false);
+  
+});
+</script>
+	  
+  </head>
+  <body class="text-center">
+
+   <div id="wrapper">
+
+<!-- Navigation bar -->  
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+            
+<a href="index.html">
+<img src="images/logo.png" width="300" height="100">
+</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="cuisine.html">Cuisine</a></li>
+	  <li><a href="menu.html">Menu</a></li>
+      <li><a href="service.html">Service</a></li>
+	  <li><a href="more-menu.html">More Menu</a></li>
+      <li><a href="testimonials.html">Customer Testimonials</a></li>
+	  <li><a href="contact.html">Contact Information</a></li>
+    </ul>
+  </div>
+</nav> 
+
+<h1 class="cover-heading">Contact Information</h1>
+        <p class="lead">Location: 5339 Mitscher Avenue Louisville, KY 40214</p>
+        <p class="lead">Phone: 502-363-7535 - 502-363-5154 (fax)</p>
+		<p class="lead">Email: <a href="mailto: bhnd17@gmail.com">bhnd17@gmail.com</a>
+</p>
+         <p>Hours</p>
+		 <p>Monday - Thursday: 11am-9pm</p>
+		 <p>Friday: 11am-10pm</p>
+		 <p>Saturday: 4pm-10pm</p>
+		 <p>Sunday: 12pm-9pm</p>
+		 <p><b>Closed on Wednesday</b></p>
+    
+         <br><br>
+      <p>A little entertainment:</p>
+    
+	
+    
+    <button id="fade-in">Fade In</button>       
+    <button id="fade-out">Fade Out</button>        
+    <button id="toggle-fading">Toggle Fading</button>
+    <img src="https://www.kasandbox.org/programming-images/creatures/Hopper-Happy.png" alt="hopper">
+    <!-- JQuery Fade In and Fade Out -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        // Monitors the buttons for a click events, fades <img> in response
+        
+        $('#fade-in').click(function(){
+            $('img').fadeIn('fast');
+        });
+        
+        $('#fade-out').click(function(){
+            $('img').fadeOut(400);
+        });
+        
+        $('#toggle-fading').click(function(){
+            $('img').fadeToggle('slow');
+        });
+    </script>
+	<br><br>
+	
+	<form name="myForm" action="{action page}">
+  <input id="go" type="button" value="Final Words!">
+</form><br>
+<p id="msg"></p>
+   
+ <hr>
+  
+  <!-- FOOTER -->
+      <div id="footer">Copyright &copy; 2020 Vietnam Kitchen<br>
+      <a href="mailto: bhnd@yahoo.com">bhnd@yahoo.com</a><br>
+     <p><a href="#">Back to top</a></p><div>
+</div>
+</div>
+</div>
+</body>
+</html>

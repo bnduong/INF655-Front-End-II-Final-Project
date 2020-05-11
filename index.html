@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VietNam Kitchen</title>
+
+    <!-- Bootstrap -->
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<style>
+.img-fluid {max-width: auto; height: auto;}
+</style>
+  </head>
+  <body>
+  <div id="wrapper">
+
+<!-- Navigation bar -->  
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+            
+<a href="index.html">
+<img src="images/logo.png" width="300" height="100">
+</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="cuisine.html">Cuisine</a></li>
+	  <li><a href="menu.html">Menu</a></li>
+      <li><a href="service.html">Service</a></li>
+	  <li><a href="more-menu.html">More Menu</a></li>
+      <li><a href="testimonials.html">Customer Testimonials</a></li>
+	  <li><a href="contact.html">Contact Information</a></li>
+    </ul>
+  </div>
+</nav> 
+  
+<center>
+<div class="w3-content w3-section" style="max-width:700px" class="img-fluid" alt="Responsive image">
+  <img class="mySlides" src="images/VN2.jpg" style="width:100%" height="350">
+  <img class="mySlides" src="images/VN1.jpg" style="width:100%" height="350">
+  <img class="mySlides" src="images/VN3.jpg" style="width:100%" height="350">
+  <img class="mySlides" src="images/VN4.jpg" style="width:100%" height="350">
+  <br><br>
+</div>
+</center>
+<!-- JS code for the slideshow -->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<!-- Bootstrap framework -->
+<div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" 
+		  height="140">
+          <h2>Why Vietnam Kitchen?</h2>
+          <p>Vietnam Kitchen provides many dishes of Vietnamese cuisine.  Serving our customers for over a decade, we offer the best food in the country and 
+		     abroad.  We care for our customers by providing healthy menus and the clean of our restaurants.  With the support from our customers, we continue 
+			 to strive and serve better.</p>
+		  
+		  <img src="images/dish1.jpg" width="350" height="300" alt="Generic placeholder image">
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" 
+		  height="140">
+		  <h2>Our History</h2>
+        
+          <p>Vietnam Kitchen first opened in south Vietnam in 2005. It attracted many customers after opening.  In 2008, Vietnam Kitchen expanded its second
+		     location in Louisville, KY, USA.  Now Vietnam Kitchen has several more locations in USA.  Based on good service and delicious food, 
+			 Vietnam Kitchen becomes one of the best Vietnamese Restaurants in America.</p>
+			 
+			 <img src="images/dish2.jpg" width="350" height="300" alt="Generic placeholder image">
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" 
+		  height="140">
+		  <h2>Our Mission</h2>
+		  <p>At Vietnam Kitchen, our mission is simple: to make a healthy Vietnamese dish that is delicious, fresh, and perfect.  We refer to good food with
+             low calories and cholesterol. We are using high quality ingredients and spices to produce the best taste ever! Our customers are our priority! 
+             Our customers are first!</p><br>
+
+			 <img src="images/dish3.jpg" width="340" height="300" alt="Generic placeholder image">
+
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">We want to share:</h2>
+		  <p>On the right is a video talking about a restaurant that was affected by the flood of Katrina.  Chi Mai is the restaurant's owner and she will
+		  tell you how she and the restaurant survive after the catastrophe.</p>
+        </div>
+        <div class="col-md-5">
+		<iframe width="400" height="300" src="https://www.youtube.com/embed/NOHKUyjsllk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
+		gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Understand Vietnamese Food</h2>
+          <p>Vietnamese Food features a combination of five fundamental taste elements in the overall meal: spicy (metal), sour (wood), bitter (fire),
+		     salty (water), and sweet (Earth).  Each Vietnamese dish has a distinctive flavor which relfects one of these elements.  Common ingredients 
+			 include fish sauce, shrimp paste, soy sauce, rice, fresh herbs, fruits, and vegetables.  </p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img src="images/dish4.jpg" width="400" height="300" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Vietnamese Recipes</h2>
+          <p>Vietnamese recipes utilize lemon-grass, ginger, mint, long coriander, Saigon cinnamon, bird's eye chili, lime and basil leaves.  Traditional
+		     Vietnamese cooking is greatly admired for its fresh ingredients, minimal use of oil, and reliance on herbs and vegetables.  With the 
+			 balance between fresh herbs and meats and a selective use of spices to reach a final taste, Vietnamese food is considered one of the 
+			 healthiest cuisine worldwide.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="images/dish5.jpg" width="400" height="250" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+  
+  <!-- FOOTER -->
+      <div id="footer">Copyright &copy; 2020 Vietnam Kitchen<br>
+      <a href="mailto: bhnd@yahoo.com">bhnd@yahoo.com</a><br>
+     <p><a href="#">Back to top</a></p><div>
+
+</div>
+</div>
+</body>
+</html>
